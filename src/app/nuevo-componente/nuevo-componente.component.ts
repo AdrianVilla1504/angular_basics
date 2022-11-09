@@ -11,8 +11,7 @@ export class NuevoComponenteComponent implements OnInit {
   nombre = 'Navis Code'
   peliculas :{nombre: string; puntuacion: number}[] = []
 
-  constructor() {
-    const service = new PeliculasService()
+  constructor(service: PeliculasService) {
     this.peliculas = service.getPeliculas()
   }
 
