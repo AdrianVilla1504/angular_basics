@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PeliculasService } from '../peliculas.service';
 
 @Component({
   selector: 'app-nuevo-componente',
@@ -9,10 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class NuevoComponenteComponent implements OnInit {
   nombre = 'Navis Code'
   peliculas :{nombre: string; puntuacion: number}[] = []
-  constructor() {}
+
+  constructor() {
+    const service = new PeliculasService()
+    this.peliculas = service.getPeliculas()
+  }
 
   ngOnInit(): void {
-    this.peliculas = this.getPeliculas();
   }
 
 }

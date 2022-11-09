@@ -10,7 +10,7 @@ export class PeliculasService{
         puntuacion: 10,
       },
       {
-        nombre: 'El quinto elemento',
+        nombre: 'Bollo de mazorca :s',
         puntuacion: 2,
       },
     ];
